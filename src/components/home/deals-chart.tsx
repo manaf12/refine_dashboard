@@ -6,19 +6,19 @@ import type { GetFieldsFromList } from "@refinedev/nestjs-query";
 import { DollarOutlined } from "@ant-design/icons";
 import { Area} from "@ant-design/plots";
 import { Card } from "antd";
-// import type { AreaConfig } from "@ant-design/plots";
-import type {AreaOptions} from  "@antv/g2plot"
+import type { AreaOptions } from "@antv/g2plot";
 import { Text } from "../text";
 import type { DashboardDealsChartQuery } from "@/graphql/types";
+
 import { DASHBOARD_DEALS_CHART_QUERY } from "./queries";
 import { mapDealsData } from "./utils";
 
- const DashboardDealsChart = () => {
+export const DashboardDealsChart = () => {
   const { data } = useList<GetFieldsFromList<DashboardDealsChartQuery>>({
     resource: "dealStages",
     filters: [{ field: "title", operator: "in", value: ["WON", "LOST"] }],
     meta: {
-      gqlQuery:DASHBOARD_DEALS_CHART_QUERY,
+      gqlQuery: DASHBOARD_DEALS_CHART_QUERY,
     },
   });
 
@@ -88,4 +88,3 @@ import { mapDealsData } from "./utils";
     </Card>
   );
 };
-export default DashboardDealsChart
