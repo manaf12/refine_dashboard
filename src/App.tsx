@@ -19,7 +19,7 @@ import Layout from "./components/layout";
 import { resources } from "./config/resources";
 import CompanyList from "./pages/company/list";
 import Create from "./pages/company/create";
-import Edit from "./pages/company/edit";
+
 import EditPage from "./pages/company/edit";
 import {TasksListPage} from "./pages/tasks/list";
 import  TasksCreatePage  from "./pages/tasks/create";

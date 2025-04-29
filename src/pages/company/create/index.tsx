@@ -1,4 +1,4 @@
-import { CompanyListPage } from "../list";
+import  CompanyListPage  from "../list";
 import { CompanyCreateModal } from "../list/create-modal";
 
 export const CompanyCreatePage = () => {
