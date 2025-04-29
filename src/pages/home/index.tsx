@@ -6,7 +6,7 @@ import type { DashboardTotalCountsQuery } from "@/graphql/types";
 
 
 import CalendarUpcomingEvents from "@/components/upcoming/upcoming-events";
-import {DashboardDealsChart} from "@/components/home/deals-chart";
+import DashboardDealsChart from "@/components/home/deals-chart";
 import DashboardLatestActivities from "@/components/latest-activity";
 import DashboardTotalCountCard from "@/components/total-count-card";
 import { DASHBOARD_TOTAL_COUNTS_QUERY } from "./queries";
