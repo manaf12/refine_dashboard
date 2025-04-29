@@ -4,9 +4,10 @@ import { useList } from "@refinedev/core";
 import type { GetFieldsFromList } from "@refinedev/nestjs-query";
 
 import { DollarOutlined } from "@ant-design/icons";
-import { Area, type AreaConfig } from "@ant-design/plots";
+import { Area} from "@ant-design/plots";
 import { Card } from "antd";
-
+// import type { AreaConfig } from "@ant-design/plots";
+import type {AreaOptions} from  "@antv/g2plot"
 import { Text } from "../text";
 import type { DashboardDealsChartQuery } from "@/graphql/types";
 import { DASHBOARD_DEALS_CHART_QUERY } from "./queries";
@@ -25,7 +26,7 @@ import { mapDealsData } from "./utils";
     return mapDealsData(data?.data);
   }, [data?.data]);
 
-  const config: AreaConfig = {
+  const config: AreaOptions = {
     isStack: false,
     data: dealData,
     xField: "timeText",
