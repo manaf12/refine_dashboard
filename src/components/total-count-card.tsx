@@ -1,9 +1,9 @@
 import React from "react";
 
 import { AuditOutlined, ShopOutlined, TeamOutlined } from "@ant-design/icons";
-import { Area, type AreaConfig } from "@ant-design/plots";
+import { Area} from "@ant-design/plots";
 import { Card, Skeleton } from "antd";
-
+import type { AreaOptions } from "@antv/g2plot";
 import { Text } from "./text";
 
 type Type = "companies" | "contacts" | "deals";
@@ -21,7 +21,7 @@ type Props = {
 }: Props) => {
   const { primaryColor, secondaryColor, icon, title } = variants[resource];
 
-  const config: AreaConfig = {
+  const config: AreaOptions = {
     appendPadding: [1, 0, 0, 0],
     padding: 0,
     syncViewPadding: true,
